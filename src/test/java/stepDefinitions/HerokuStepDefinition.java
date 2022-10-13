@@ -5,6 +5,7 @@ import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.HerokuPages;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 import java.time.Duration;
@@ -36,7 +37,8 @@ public class HerokuStepDefinition {
         herokuPages.deleteButton.click();
     }
     @And("Delete butonunun gorunmedigini test edin")
-    public void deleteButonununGorunmediginiTestEdin() {
+    public void deleteButonununGorunmediginiTestEdin()
+    {
         assert ! herokuPages.deleteElement.isDisplayed();
     }
     @And("AddRemove Elements yazisinin gorunurlugunu test eder")
@@ -44,7 +46,10 @@ public class HerokuStepDefinition {
         assert herokuPages.addRemovesElementsText.getText().equals("Add/Remove Elements");
     }
 
-    @Given("User goes to direct {string}")
-    public void userGoesToDirect(String arg0) {
+        @Given("User goes to direct {string}")
+        public void userGoesToDirect(String arg0) {
+       Driver.getDriver().get("https://the-internet.herokuapp.com/add_remove_elements/");
     }
+
+
 }

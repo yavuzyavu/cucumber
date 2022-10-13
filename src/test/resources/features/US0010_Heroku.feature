@@ -1,5 +1,4 @@
 
-
 @abd
 Feature: US1011ClassWork
   Scenario: Herocap sitesi buton tarama

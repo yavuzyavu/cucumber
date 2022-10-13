@@ -1,16 +1,14 @@
 package runners;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        plugin={"html:target/cucumber-reports.html"},
         features = "src/test/resources/features",
         glue = "stepDefinitions",
-        tags = "@abd", // iki tag'ı aynı anda çalıştırmak isterseniz "@gp1 or @gp2"
+        tags = "@practiceClick", // iki tag'ı aynı anda çalıştırmak isterseniz "@gp1 or @gp2"
         dryRun = false
-
 )
 public class Runner {
     /*
@@ -24,10 +22,9 @@ public class Runner {
     features : Runeer dosyasının feature dosyasını nereden bulacağını tarif eder
     glue : stepDefinitions yolunu belirtiriz
     tags : Hangi tag'i çalıştırmak istiyorsak onu belli eder
-
     dryRun : iki seçenek vardır
     dryRun = true; dersek testimizi çalıştırmadan eksik adımları bize verir
     dryRun = false; testlerimizi driver ile çalıştırır.
      */
-
 }
+

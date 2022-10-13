@@ -1,15 +1,15 @@
-Feature: : US008 OdevBRC
+Feature: : US1011 Scenario Outline Kullanimi
 
   @BRC
   Scenario Outline: : TC11 kullanici gecersiz bilgilerle giris yapar
     Given kullanici "brcUrl" anasayfasina gider
-    Then login yazisina tiklar
+    Then Login yazisina tiklar,
     And "<gecersizEmail>" username girer
     And "<gecersizPass>" password girer
     And brc Login butonuna basar
     Then brc sayfasina giris yapilamadigini kontrol eder
     And kullanici 3 sn bekler
-    And  Sayfayi kapatir
+    And  sayfayi kapatir
 
     Examples: :
   | gecersizEmail   | gecersizPass |

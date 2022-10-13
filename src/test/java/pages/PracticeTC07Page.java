@@ -14,8 +14,8 @@ public class PracticeTC07Page {
     @FindBy (xpath = "(//*[.=' Test Cases'])[2]")
     public WebElement testCaseLink;
 
-    //@FindBy (xpath = "")
-    //public WebElement testCaseLink;
+    @FindBy (xpath = "(//h2)[1]")
+    public WebElement testCaseTitle;
 
 
 }

@@ -1,5 +1,5 @@
 @abdullah
-Feature : US006 kullanici amazonda istegi kelimeleri aratir
+Feature: US006 kullanici amazonda istegi kelimeleri aratir
 
   Scenario Outline : TC01 Kullanici istedigi kelimeleri aratir
 
