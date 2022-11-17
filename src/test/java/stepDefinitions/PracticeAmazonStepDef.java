@@ -80,7 +80,7 @@ public class PracticeAmazonStepDef {
     }
     @Then("websayfasini kapatir")
     public void websayfasini_kapatir() {
-        Driver.quitDriver();
+        Driver.closeDriver();
 
     }
 
